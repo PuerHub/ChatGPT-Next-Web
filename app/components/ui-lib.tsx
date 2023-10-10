@@ -420,11 +420,20 @@ export function showPrompt(content: any, value = "", rows = 3) {
   });
 }
 
-export function showImageModal(img: string) {
+export function showImageModal(
+  img: string,
+  title: string = Locale.Export.Image.Modal,
+) {
   showModal({
-    title: Locale.Export.Image.Modal,
+    title,
     children: (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <img
           src={img}
           alt="preview"

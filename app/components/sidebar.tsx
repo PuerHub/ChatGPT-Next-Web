@@ -1,10 +1,11 @@
-import { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 
 import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
-import GithubIcon from "../icons/github.svg";
+import StoreIcon from "../icons/store.svg";
+import WeChatIcon from "../icons/wechat.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
@@ -22,13 +23,14 @@ import {
   MIN_SIDEBAR_WIDTH,
   NARROW_SIDEBAR_WIDTH,
   Path,
-  REPO_URL,
+  STORE_URL,
+  WeChatQR_URL,
 } from "../constant";
 
 import { Link, useNavigate } from "react-router-dom";
 import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
-import { showConfirm, showToast } from "./ui-lib";
+import { showConfirm, showToast, showImageModal } from "./ui-lib";
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -145,10 +147,10 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          ChatGPT Next
+          PuerHub
         </div>
         <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+          Hello, welcome to use! 👋
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
@@ -170,10 +172,12 @@ export function SideBar(props: { className?: string }) {
           shadow
         />
         <IconButton
-          icon={<PluginIcon />}
-          text={shouldNarrow ? undefined : Locale.Plugin.Name}
+          icon={<WeChatIcon />}
+          text={shouldNarrow ? undefined : Locale.Home.Group}
           className={styles["sidebar-bar-button"]}
-          onClick={() => showToast(Locale.WIP)}
+          onClick={() =>
+            showImageModal(WeChatQR_URL, Locale.Export.Image.WeChatQR)
+          }
           shadow
         />
       </div>
@@ -206,9 +210,18 @@ export function SideBar(props: { className?: string }) {
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
+          {/*<div className={styles["sidebar-action"]}>*/}
+          {/*  <IconButton*/}
+          {/*    icon={<WeChatIcon />}*/}
+          {/*    shadow*/}
+          {/*    onClick={() => {*/}
+          {/*      showImageModal(WeChatQR_URL, Locale.Export.Image.WeChatQR);*/}
+          {/*    }}*/}
+          {/*  />*/}
+          {/*</div>*/}
           <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-              <IconButton icon={<GithubIcon />} shadow />
+            <a href={STORE_URL} target="_blank" rel="noopener noreferrer">
+              <IconButton icon={<StoreIcon />} shadow />
             </a>
           </div>
         </div>
