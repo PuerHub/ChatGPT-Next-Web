@@ -9,8 +9,8 @@ const en: LocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized: isApp
-      ? "Invalid API Key detected. You can obtain an API Key by 👉 **[clicking here](https://ai.puerhub.xyz/login)** to register an **account**, and then click the [Settings](/#/settings) button in the bottom left corner to enter your API Key and start enjoying the **magic of GPT-4 for free**. 😊"
-      : "Unauthorized access, please enter access code in [auth](/#/auth) page, or enter your OpenAI API Key. You can obtain an API Key by 👉 **[clicking here](https://ai.puerhub.xyz/login)** to register an **account** and start enjoying the **magic of GPT-4 for free**. 😊",
+      ? "Invalid API Key detected. You can obtain an API Key by 👉 **[clicking here](https://ai.puerhub.xyz/login)** to register an **account**, and then click the [Settings](/#/settings) button in the bottom left corner to enter your API Key and start enjoying the **magic of GPT-4 for free**. 😊 Please refer to the **[User Manual](https://puerhub.yuque.com/org-wiki-vtcqi0/fuxcn8/vi4uegpwm99ur4c7)** for detailed instructions on the method steps. 📘"
+      : "Unauthorized access, please enter access code in [auth](/#/auth) page, or enter your OpenAI API Key. You can obtain an API Key by 👉 **[clicking here](https://ai.puerhub.xyz/login)** to register an **account** and start enjoying the **magic of GPT-4 for free**. 😊 Please refer to the **[User Manual](https://puerhub.yuque.com/org-wiki-vtcqi0/fuxcn8/vi4uegpwm99ur4c7)** for detailed instructions on the method steps. 📘",
   },
   Auth: {
     Title: "Need Access Code",
@@ -317,9 +317,9 @@ const en: LocaleType = {
   },
   Store: {
     DefaultTopic: "New Conversation",
-    BotHello: `🎉 Welcome to the **AI GC** world! 👏 **[Click here](https://ai.puerhub.xyz/login)** to register an **account**, and then click the [Settings](/#/settings) button in the bottom left corner to enter your API Key to unleash the **magic of GPT-4 for free**. 
+    BotHello: `🎉 Welcome to the **AI GC** world! 👏 **[Click here](https://ai.puerhub.xyz/login)** to register an **account**, and then click the [Settings](/#/settings) button in the bottom left corner to enter your API Key to unleash the **magic of GPT-4 for free**. Please refer to the **[User Manual](https://puerhub.yuque.com/org-wiki-vtcqi0/fuxcn8/vi4uegpwm99ur4c7)** for detailed instructions on the method steps. 📘
 
-The API Key is **personal and exclusive**, which prevents any potential **lag or unresponsiveness** issues that may arise from shared usage. In addition, using the API Key allows you to enjoy various derivative products of GPT, such as 🎓 **[Academic Optimization](https://github.com/binary-husky/gpt_academic)** 🎓, which can help you enhance your reading, proofreading, and writing experience for papers, and 🔎 **[Translation Tool](https://github.com/Raychanan/ChatGPT-for-Translation)** 🔍 that can assist you in batch translating files like \`pdf, txt, md, html, rtf\` and more. Of course, there's also 🚀 **[AutoGPT](https://github.com/ConnectAI-E/AutoGPT-Next-Web)** 🚀, which doesn't require prompts and can autonomously complete tasks, making your work twice as efficient!
+The API Key is **personal and exclusive**, which prevents any potential **lag or unresponsiveness** issues that may arise from shared usage. In addition, using the API Key allows you to enjoy various derivative products of GPT, such as 🎓 **[Academic Optimization](https://academic.puerhub.xyz)** 🎓, which can help you enhance your reading, proofreading, and writing experience for papers, and 🔎 **[Translation Tool](https://github.com/Raychanan/ChatGPT-for-Translation)** 🔍 that can assist you in batch translating files like \`pdf, txt, md, html, rtf\` and more. Of course, there's also 🚀 **[AutoGPT](https://github.com/ConnectAI-E/AutoGPT-Next-Web)** 🚀, which doesn't require prompts and can autonomously complete tasks, making your work twice as efficient!
 
 Do you have any questions? Interested in knowing the **differences** between GPT-4 and GPT-3.5?
 **No problem!** GPT-4 offers stronger reasoning capabilities and more details compared to GPT-3.5. However, GPT-4 is also **priced higher**, and for simple tasks, GPT-3.5 is more than sufficient!
