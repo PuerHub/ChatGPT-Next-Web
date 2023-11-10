@@ -582,10 +582,8 @@ export function Settings() {
 
   const accessStore = useAccessStore();
   const shouldHideBalanceQuery = useMemo(() => {
-    const isOpenAiUrl = accessStore.openaiUrl.includes(OPENAI_BASE_URL);
     return (
       accessStore.hideBalanceQuery ||
-      isOpenAiUrl ||
       accessStore.provider === ServiceProvider.Azure
     );
   }, [
@@ -909,65 +907,65 @@ export function Settings() {
 
           {!accessStore.hideUserApiKey && (
             <>
-              <ListItem
-                title={Locale.Settings.Access.CustomEndpoint.Title}
-                subTitle={Locale.Settings.Access.CustomEndpoint.SubTitle}
-              >
-                <input
-                  type="checkbox"
-                  checked={accessStore.useCustomConfig}
-                  onChange={(e) =>
-                    accessStore.update(
-                      (access) =>
-                        (access.useCustomConfig = e.currentTarget.checked),
-                    )
-                  }
-                ></input>
-              </ListItem>
+              {/*<ListItem*/}
+              {/*  title={Locale.Settings.Access.CustomEndpoint.Title}*/}
+              {/*  subTitle={Locale.Settings.Access.CustomEndpoint.SubTitle}*/}
+              {/*>*/}
+              {/*  <input*/}
+              {/*    type="checkbox"*/}
+              {/*    checked={accessStore.useCustomConfig}*/}
+              {/*    onChange={(e) =>*/}
+              {/*      accessStore.update(*/}
+              {/*        (access) =>*/}
+              {/*          (access.useCustomConfig = e.currentTarget.checked),*/}
+              {/*      )*/}
+              {/*    }*/}
+              {/*  ></input>*/}
+              {/*</ListItem>*/}
               {accessStore.useCustomConfig && (
                 <>
-                  <ListItem
-                    title={Locale.Settings.Access.Provider.Title}
-                    subTitle={Locale.Settings.Access.Provider.SubTitle}
-                  >
-                    <Select
-                      value={accessStore.provider}
-                      onChange={(e) => {
-                        accessStore.update(
-                          (access) =>
-                            (access.provider = e.target
-                              .value as ServiceProvider),
-                        );
-                      }}
-                    >
-                      {Object.entries(ServiceProvider).map(([k, v]) => (
-                        <option value={v} key={k}>
-                          {k}
-                        </option>
-                      ))}
-                    </Select>
-                  </ListItem>
+                  {/*<ListItem*/}
+                  {/*  title={Locale.Settings.Access.Provider.Title}*/}
+                  {/*  subTitle={Locale.Settings.Access.Provider.SubTitle}*/}
+                  {/*>*/}
+                  {/*  <Select*/}
+                  {/*    value={accessStore.provider}*/}
+                  {/*    onChange={(e) => {*/}
+                  {/*      accessStore.update(*/}
+                  {/*        (access) =>*/}
+                  {/*          (access.provider = e.target*/}
+                  {/*            .value as ServiceProvider),*/}
+                  {/*      );*/}
+                  {/*    }}*/}
+                  {/*  >*/}
+                  {/*    {Object.entries(ServiceProvider).map(([k, v]) => (*/}
+                  {/*      <option value={v} key={k}>*/}
+                  {/*        {k}*/}
+                  {/*      </option>*/}
+                  {/*    ))}*/}
+                  {/*  </Select>*/}
+                  {/*</ListItem>*/}
 
                   {accessStore.provider === "OpenAI" ? (
                     <>
-                      <ListItem
-                        title={Locale.Settings.Access.OpenAI.Endpoint.Title}
-                        subTitle={
-                          Locale.Settings.Access.OpenAI.Endpoint.SubTitle
-                        }
-                      >
-                        <input
-                          type="text"
-                          value={accessStore.openaiUrl}
-                          placeholder={OPENAI_BASE_URL}
-                          onChange={(e) =>
-                            accessStore.update(
-                              (access) =>
-                                (access.openaiUrl = e.currentTarget.value),
-                            )
-                          }
-                        ></input>
-                      </ListItem>
+                      {/*<ListItem*/}
+                      {/*  title={Locale.Settings.Access.OpenAI.Endpoint.Title}*/}
+                      {/*  subTitle={*/}
+                      {/*    Locale.Settings.Access.OpenAI.Endpoint.SubTitle*/}
+                      {/*  }*/}
+                      {/*>*/}
+                      {/*  <input*/}
+                      {/*    type="text"*/}
+                      {/*    value={accessStore.openaiUrl}*/}
+                      {/*    placeholder={OPENAI_BASE_URL}*/}
+                      {/*    onChange={(e) =>*/}
+                      {/*      accessStore.update(*/}
+                      {/*        (access) =>*/}
+                      {/*          (access.openaiUrl = e.currentTarget.value),*/}
+                      {/*      )*/}
+                      {/*    }*/}
+                      {/*  ></input>*/}
+                      {/*</ListItem>*/}
                       <ListItem
                         title={Locale.Settings.Access.OpenAI.ApiKey.Title}
                         subTitle={Locale.Settings.Access.OpenAI.ApiKey.SubTitle}

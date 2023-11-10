@@ -7,13 +7,13 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized: isApp
-      ? "检测到无效 API Key，获取 API Key 可以 👉 **[点击这里](https://ai.puerhub.xyz/login)** 注册 **账户**，然后点击左下角 [设置](/#/settings) 按钮输入 API Key **即可免费畅享 GPT 4 的魔力** 哦 😊，详细的方法步骤请查看 **[使用手册](https://puerhub.yuque.com/org-wiki-vtcqi0/fuxcn8/vi4uegpwm99ur4c7)** 📘"
-      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。获取 API Key 可以 👉 **[点击这里](https://ai.puerhub.xyz/login)** 注册 **账户**，即可 **免费畅享 GPT 4 的魔力** 哦 😊，详细的方法步骤请查看 **[使用手册](https://puerhub.yuque.com/org-wiki-vtcqi0/fuxcn8/vi4uegpwm99ur4c7)** 📘",
+      ? "检测到无效 API Key，获取 API Key 可以 👉 **[点击这里](https://ai.puerhub.xyz/start#signup)** 注册 **账户**，然后点击左下角 [设置](/#/settings) 按钮输入 API Key **即可免费畅享 GPT 4 的魔力** 哦 😊，详细的方法步骤请查看 **[使用手册](https://doc.puerhub.net)** 📘"
+      : "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。获取 API Key 可以 👉 **[点击这里](https://ai.puerhub.xyz/start#signup)** 注册 **账户**，即可 **免费畅享 GPT 4 的魔力** 哦 😊，详细的方法步骤请查看 **[使用手册](https://doc.puerhub.net)** 📘",
   },
   Auth: {
     Title: "需要密码",
     Tips: "管理员开启了密码验证，请在下方填入访问码",
-    SubTips: "或者输入你的 OpenAI API 密钥",
+    SubTips: "或者输入你的 API 密钥",
     Input: "在此处填写访问码",
     Confirm: "确认",
     Later: "稍后再说",
@@ -344,14 +344,14 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: `🎉 欢迎来到 **AI GC** 小天地！👏 **[点击这里](https://ai.puerhub.xyz/login)** 注册 **账户**，然后点击左下角 [设置](/#/settings) 按钮输入 API Key **即可免费畅享 GPT 4 的魔力** 哦。详细的方法步骤请查看 **[使用手册](https://puerhub.yuque.com/org-wiki-vtcqi0/fuxcn8/vi4uegpwm99ur4c7)** 📘 ~
+    BotHello: `🎉 欢迎来到 **AI GC** 小天地！👏 **[点击这里](https://ai.puerhub.xyz/start#signup)** 注册 **账户**，然后点击左下角 [设置](/#/settings) 按钮输入 API Key **即可免费畅享 GPT 4 的魔力** 哦。详细的方法步骤请查看 **[使用手册](https://doc.puerhub.net)** 📘 ~
  
  API Key 是 **个人专属** 的哦，避免了其他共享使用可能出现的 **卡顿或无响应** 情况。除此以外，使用 API Key 可以畅玩各种 GPT 的派生产品，比如 🎓 **[学术优化](https://academic.puerhub.xyz)** 🎓，可帮你优化论文的阅读、润色和写作体验，🔎 **[翻译工具](https://github.com/Raychanan/ChatGPT-for-Translation)** 🔍 还能助你批量翻译 \`pdf, txt, md, html, rtf\` 等文件。当然，还有 🚀 **[AutoGPT](https://github.com/ConnectAI-E/AutoGPT-Next-Web)** 🚀 无需提示词，自主完成任务，让你事半功倍！
 
  有问题吗？想了解 GPT-4 和 GPT-3.5 的 **区别** 吗？
  **没问题！** GPT-4 相比 GPT-3.5 拥有更强的推理能力和更多的细节。但是 GPT-4 的价格也相应 **较高**，对于简单的任务，GPT-3.5 完全够用哦！
 
- 欢迎随时来聊聊 👉 **[点击打开微信群二维码](https://oss.puerhub.com/web/chat_wecom_qr.png)**，群里可以提建议、问问题、交朋友，还有 **兑换码** 免费赠送！📣😃
+ 欢迎随时来聊聊 👉 **[点击打开微信群二维码](https://oss.puerhub.com/web/chat_wecom_qr.png)**，群里可以提建议、问问题、交朋友！📣😃
 `,
     Error: "出错了，稍后重试吧",
     Prompt: {
