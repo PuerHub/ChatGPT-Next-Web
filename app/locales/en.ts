@@ -9,8 +9,8 @@ const en: LocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized: isApp
-      ? "Invalid API Key detected. You can obtain an API Key by 👉 **[clicking here](https://ai.puerhub.xyz/start#signup)** to register an **account**, and then click the [Settings](/#/settings) button in the bottom left corner to enter your API Key and start enjoying the **magic of GPT-4 for free**. 😊 Please refer to the **[User Manual](https://doc.puerhub.net)** for detailed instructions on the method steps. 📘"
-      : "Unauthorized access, please enter access code in [auth](/#/auth) page, or enter your API Key. You can obtain an API Key by 👉 **[clicking here](https://ai.puerhub.xyz/start#signup)** to register an **account** and start enjoying the **magic of GPT-4 for free**. 😊 Please refer to the **[User Manual](https://doc.puerhub.net)** for detailed instructions on the method steps. 📘",
+      ? "Invalid API Key detected. You can obtain an API Key by 👉 **[clicking here](https://ai.puerhub.xyz/start#signup)** to register an **account**, and then click the [Settings](/#/settings) button in the bottom left corner to enter your API Key and start enjoying the **magic of GPT-4 for free**. 😊 Please refer to the **[User Manual](https://doc.puerhub.xyz)** for detailed instructions on the method steps. 📘"
+      : "Unauthorized access, please enter access code in [auth](/#/auth) page, or enter your API Key. You can obtain an API Key by 👉 **[clicking here](https://ai.puerhub.xyz/start#signup)** to register an **account** and start enjoying the **magic of GPT-4 for free**. 😊 Please refer to the **[User Manual](https://doc.puerhub.xyz)** for detailed instructions on the method steps. 📘",
   },
   Auth: {
     Title: "Need Access Code",
@@ -349,7 +349,7 @@ const en: LocaleType = {
   },
   Store: {
     DefaultTopic: "New Conversation",
-    BotHello: `🎉 Welcome to the **AI GC** world! 👏 **[Click here](https://ai.puerhub.xyz/start#signup)** to register an **account**, and then click the [Settings](/#/settings) button in the bottom left corner to enter your API Key to unleash the **magic of GPT-4 for free**. Please refer to the **[User Manual](https://doc.puerhub.net)** for detailed instructions on the method steps. 📘
+    BotHello: `🎉 Welcome to the **AI GC** world! 👏 **[Click here](https://ai.puerhub.xyz/start#signup)** to register an **account**, and then click the [Settings](/#/settings) button in the bottom left corner to enter your API Key to unleash the **magic of GPT-4 for free**. Please refer to the **[User Manual](https://doc.puerhub.xyz)** for detailed instructions on the method steps. 📘
 
 The API Key is **personal and exclusive**, which prevents any potential **lag or unresponsiveness** issues that may arise from shared usage. In addition, using the API Key allows you to enjoy various derivative products of GPT, such as 🎓 **[Academic Optimization](https://academic.puerhub.xyz)** 🎓, which can help you enhance your reading, proofreading, and writing experience for papers, and 🔎 **[Translation Tool](https://github.com/Raychanan/ChatGPT-for-Translation)** 🔍 that can assist you in batch translating files like \`pdf, txt, md, html, rtf\` and more. Of course, there's also 🚀 **[AutoGPT](https://github.com/ConnectAI-E/AutoGPT-Next-Web)** 🚀, which doesn't require prompts and can autonomously complete tasks, making your work twice as efficient!
 
@@ -452,8 +452,8 @@ Feel free to chat anytime 👉 **[Click to open the WeChat group QR code](https:
   },
   Exporter: {
     Description: {
-      Title: "Only messages after clearing the context will be displayed"
-    },  
+      Title: "Only messages after clearing the context will be displayed",
+    },
     Model: "Model",
     Messages: "Messages",
     Topic: "Topic",
