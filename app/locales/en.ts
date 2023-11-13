@@ -451,6 +451,9 @@ Feel free to chat anytime 👉 **[Click to open the WeChat group QR code](https:
     Config: "Config",
   },
   Exporter: {
+    Description: {
+      Title: "Only messages after clearing the context will be displayed"
+    },  
     Model: "Model",
     Messages: "Messages",
     Topic: "Topic",
