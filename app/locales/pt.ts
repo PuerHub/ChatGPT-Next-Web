@@ -104,6 +104,7 @@ const pt: LocaleType = {
       Toast: "Capturando Imagem...",
       Modal:
         "Pressione longamente ou clique com o botão direito para salvar a imagem",
+      WeChatQR: "Join WeCom Group",
     },
   },
   Select: {
@@ -126,6 +127,7 @@ const pt: LocaleType = {
     DeleteChat: "Confirmar para deletar a conversa selecionada?",
     DeleteToast: "Chat Deletado",
     Revert: "Reverter",
+    Group: "Group",
   },
   Settings: {
     Title: "Configurações",
