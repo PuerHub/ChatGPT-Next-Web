@@ -14,6 +14,8 @@ export const DEFAULT_CORS_HOST = "https://a.nextweb.fun";
 export const DEFAULT_API_HOST = `${DEFAULT_CORS_HOST}/api/proxy`;
 export const OPENAI_BASE_URL = "https://api.puerhub.net";
 
+export const GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/";
+
 export enum Path {
   Home = "/",
   Chat = "/chat",
@@ -67,6 +69,12 @@ export const EXPORT_MESSAGE_CLASS_NAME = "export-markdown";
 export enum ServiceProvider {
   OpenAI = "OpenAI",
   Azure = "Azure",
+  Google = "Google",
+}
+
+export enum ModelProvider {
+  GPT = "GPT",
+  GeminiPro = "GeminiPro",
 }
 
 export const OpenaiPath = {
@@ -78,6 +86,13 @@ export const OpenaiPath = {
 
 export const Azure = {
   ExampleEndpoint: "https://{resource-url}/openai/deployments/{deploy-id}",
+};
+
+export const Google = {
+  ExampleEndpoint: "https://generativelanguage.googleapis.com/",
+  ChatPath: "v1beta/models/gemini-pro:generateContent",
+
+  // /api/openai/v1/chat/completions
 };
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
@@ -94,7 +109,9 @@ export const SUMMARIZE_MODEL = "gpt-3.5-turbo";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
+  "gpt-4-turbo-preview": "2023-04",
   "gpt-4-1106-preview": "2023-04",
+  "gpt-4-0125-preview": "2023-04",
   "gpt-4-vision-preview": "2023-04",
 };
 
@@ -102,58 +119,155 @@ export const DEFAULT_MODELS = [
   {
     name: "gpt-4",
     available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
   },
   // {
   //   name: "gpt-4-0314",
   //   available: true,
+  //   provider: {
+  //     id: "openai",
+  //     providerName: "OpenAI",
+  //     providerType: "openai",
+  //   },
   // },
   // {
   //   name: "gpt-4-0613",
   //   available: true,
+  //   provider: {
+  //     id: "openai",
+  //     providerName: "OpenAI",
+  //     providerType: "openai",
+  //   },
   // },
   {
     name: "gpt-4-32k",
     available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
   },
   // {
   //   name: "gpt-4-32k-0314",
   //   available: true,
+  //   provider: {
+  //     id: "openai",
+  //     providerName: "OpenAI",
+  //     providerType: "openai",
+  //   },
   // },
   // {
   //   name: "gpt-4-32k-0613",
   //   available: true,
+  //   provider: {
+  //     id: "openai",
+  //     providerName: "OpenAI",
+  //     providerType: "openai",
+  //   },
   // },
   {
-    name: "gpt-4-1106-preview",
+    name: "gpt-4-turbo-preview",
     available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
   },
+  // {
+  //   name: "gpt-4-1106-preview",
+  //   available: true,
+  //   provider: {
+  //     id: "openai",
+  //     providerName: "OpenAI",
+  //     providerType: "openai",
+  //   },
+  // },
+  // {
+  //   name: "gpt-4-0125-preview",
+  //   available: true,
+  //   provider: {
+  //     id: "openai",
+  //     providerName: "OpenAI",
+  //     providerType: "openai",
+  //   },
+  // },
   {
     name: "gpt-4-vision-preview",
     available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
   },
   {
     name: "gpt-3.5-turbo",
     available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
   },
   // {
   //   name: "gpt-3.5-turbo-0301",
   //   available: true,
+  //   provider: {
+  //     id: "openai",
+  //     providerName: "OpenAI",
+  //     providerType: "openai",
+  //   },
   // },
   // {
   //   name: "gpt-3.5-turbo-0613",
   //   available: true,
+  //   provider: {
+  //     id: "openai",
+  //     providerName: "OpenAI",
+  //     providerType: "openai",
+  //   },
   // },
   {
     name: "gpt-3.5-turbo-1106",
     available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
   },
   {
     name: "gpt-3.5-turbo-16k",
     available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
   },
   // {
   //   name: "gpt-3.5-turbo-16k-0613",
   //   available: true,
+  //   provider: {
+  //     id: "openai",
+  //     providerName: "OpenAI",
+  //     providerType: "openai",
+  //   },
+  // },
+  // {
+  //   name: "gemini-pro",
+  //   available: true,
+  //   provider: {
+  //     id: "google",
+  //     providerName: "Google",
+  //     providerType: "google",
+  //   },
   // },
 ] as const;
 

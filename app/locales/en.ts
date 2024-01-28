@@ -321,6 +321,24 @@ const en: LocaleType = {
         Title: "Custom Models",
         SubTitle: "Custom model options, seperated by comma",
       },
+      Google: {
+        ApiKey: {
+          Title: "API Key",
+          SubTitle:
+            "Bypass password access restrictions using a custom Google AI Studio API Key",
+          Placeholder: "Google AI Studio API Key",
+        },
+
+        Endpoint: {
+          Title: "Endpoint Address",
+          SubTitle: "Example:",
+        },
+
+        ApiVerion: {
+          Title: "API Version (gemini-pro api version)",
+          SubTitle: "Select a specific part version",
+        },
+      },
     },
 
     Model: "Model",
@@ -362,7 +380,7 @@ Feel free to chat anytime 👉 **[Click to open the WeChat group QR code](https:
       History: (content: string) =>
         "This is a summary of the chat history as a recap: " + content,
       Topic:
-        "Please generate a four to five word title summarizing our conversation without any lead-in, punctuation, quotation marks, periods, symbols, or additional text. Remove enclosing quotation marks.",
+        "Please generate a four to five word title summarizing our conversation without any lead-in, punctuation, quotation marks, periods, symbols, bold text, or additional text. Remove enclosing quotation marks.",
       Summarize:
         "Summarize the discussion briefly in 200 words or less to use as a prompt for future context.",
     },

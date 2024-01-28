@@ -52,6 +52,7 @@ import { copyToClipboard } from "../utils";
 import Link from "next/link";
 import {
   Azure,
+  Google,
   OPENAI_BASE_URL,
   Path,
   RELEASE_URL,
@@ -633,6 +634,12 @@ export function Settings() {
         navigate(Path.Home);
       }
     };
+    if (clientConfig?.isApp) {
+      // Force to set custom endpoint to true if it's app
+      accessStore.update((state) => {
+        state.useCustomConfig = true;
+      });
+    }
     document.addEventListener("keydown", keydownEvent);
     return () => {
       document.removeEventListener("keydown", keydownEvent);
@@ -985,7 +992,7 @@ export function Settings() {
                         />
                       </ListItem>
                     </>
-                  ) : (
+                  ) : accessStore.provider === "Azure" ? (
                     <>
                       <ListItem
                         title={Locale.Settings.Access.Azure.Endpoint.Title}
@@ -1044,7 +1051,66 @@ export function Settings() {
                         ></input>
                       </ListItem>
                     </>
-                  )}
+                  ) : accessStore.provider === "Google" ? (
+                    <>
+                      <ListItem
+                        title={Locale.Settings.Access.Google.Endpoint.Title}
+                        subTitle={
+                          Locale.Settings.Access.Google.Endpoint.SubTitle +
+                          Google.ExampleEndpoint
+                        }
+                      >
+                        <input
+                          type="text"
+                          value={accessStore.googleUrl}
+                          placeholder={Google.ExampleEndpoint}
+                          onChange={(e) =>
+                            accessStore.update(
+                              (access) =>
+                                (access.googleUrl = e.currentTarget.value),
+                            )
+                          }
+                        ></input>
+                      </ListItem>
+                      <ListItem
+                        title={Locale.Settings.Access.Azure.ApiKey.Title}
+                        subTitle={Locale.Settings.Access.Azure.ApiKey.SubTitle}
+                      >
+                        <PasswordInput
+                          value={accessStore.googleApiKey}
+                          type="text"
+                          placeholder={
+                            Locale.Settings.Access.Google.ApiKey.Placeholder
+                          }
+                          onChange={(e) => {
+                            accessStore.update(
+                              (access) =>
+                                (access.googleApiKey = e.currentTarget.value),
+                            );
+                          }}
+                        />
+                      </ListItem>
+                      <ListItem
+                        title={Locale.Settings.Access.Google.ApiVerion.Title}
+                        subTitle={
+                          Locale.Settings.Access.Google.ApiVerion.SubTitle
+                        }
+                      >
+                        <input
+                          type="text"
+                          value={accessStore.googleApiVersion}
+                          placeholder="2023-08-01-preview"
+                          onChange={(e) =>
+                            accessStore.update(
+                              (access) =>
+                                (access.googleApiVersion =
+                                  e.currentTarget.value),
+                            )
+                          }
+                        ></input>
+                      </ListItem>
+                    </>
+                  ) : null}
                 </>
               )}
             </>

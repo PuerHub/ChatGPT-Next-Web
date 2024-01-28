@@ -9,7 +9,7 @@
   },
   "package": {
     "productName": "PuerHub ChatGPT",
-    "version": "2.9.12"
+    "version": "2.10.1"
   },
   "tauri": {
     "allowlist": {
@@ -68,7 +68,7 @@
         "icons/icon.ico"
       ],
       "identifier": "com.puerhub.chatgpt",
-      "longDescription": "ChatGPT Next Web is a cross-platform ChatGPT client, including Web/Win/Linux/OSX/PWA.",
+      "longDescription": "NextChat is a cross-platform ChatGPT client, including Web/Win/Linux/OSX/PWA.",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -104,7 +104,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "ChatGPT Next Web",
+        "title": "NextChat",
         "width": 960,
         "hiddenTitle": true,
         "titleBarStyle": "Overlay"
